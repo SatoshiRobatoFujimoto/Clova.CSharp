@@ -29,7 +29,9 @@ namespace Clova.CSharp.Models
         public JObject Request { get; set; }
 
         [JsonIgnore]
-        public string RequestType => Request?.GetValue("type")?.Value<string>();
+        public RequestType RequestType => (RequestType)Enum.Parse(
+            typeof(RequestType), 
+            Request?.GetValue("type")?.Value<string>() ?? nameof(RequestType.Unknown));
     }
 
     public partial class Context
