@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clova.CSharp", "Clova.CSharp\Clova.CSharp.csproj", "{C5A9FFB7-29D5-40F4-896A-6D7932DE9EDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clova.CSharp.Tests", "Clova.CSharp.Tests\Clova.CSharp.Tests.csproj", "{F6DB768E-E1D4-48B6-BDDE-E9B471DE1DB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C5A9FFB7-29D5-40F4-896A-6D7932DE9EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5A9FFB7-29D5-40F4-896A-6D7932DE9EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5A9FFB7-29D5-40F4-896A-6D7932DE9EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DB768E-E1D4-48B6-BDDE-E9B471DE1DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DB768E-E1D4-48B6-BDDE-E9B471DE1DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DB768E-E1D4-48B6-BDDE-E9B471DE1DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DB768E-E1D4-48B6-BDDE-E9B471DE1DB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,7 +2,7 @@
 //
 //    using Clova.CSharp.Models;
 //
-//    var clovaResponse = ClovaResponse.FromJson(jsonString);
+//    var clovaRequest = ClovaRequest.FromJson(jsonString);
 
 namespace Clova.CSharp.Models
 {
@@ -14,7 +14,7 @@ namespace Clova.CSharp.Models
     using Newtonsoft.Json.Converters;
     using Newtonsoft.Json.Linq;
 
-    public partial class ClovaResponse
+    public partial class ClovaRequest
     {
         [JsonProperty("version")]
         public string Version { get; set; }
@@ -27,6 +27,9 @@ namespace Clova.CSharp.Models
 
         [JsonProperty("request")]
         public JObject Request { get; set; }
+
+        [JsonIgnore]
+        public string RequestType => Request?.GetValue("type")?.Value<string>();
     }
 
     public partial class Context
@@ -110,14 +113,14 @@ namespace Clova.CSharp.Models
         public User User { get; set; }
     }
 
-    public partial class ClovaResponse
+    public partial class ClovaRequest
     {
-        public static ClovaResponse FromJson(string json) => JsonConvert.DeserializeObject<ClovaResponse>(json, Clova.CSharp.Models.Converter.Settings);
+        public static ClovaRequest FromJson(string json) => JsonConvert.DeserializeObject<ClovaRequest>(json, Clova.CSharp.Models.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this ClovaResponse self) => JsonConvert.SerializeObject(self, Clova.CSharp.Models.Converter.Settings);
+        public static string ToJson(this ClovaRequest self) => JsonConvert.SerializeObject(self, Clova.CSharp.Models.Converter.Settings);
     }
 
     internal static class Converter
