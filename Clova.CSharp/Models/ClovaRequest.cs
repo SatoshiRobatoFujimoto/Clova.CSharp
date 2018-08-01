@@ -61,7 +61,7 @@ namespace Clova.CSharp.Models
     public partial class Device
     {
         [JsonProperty("deviceId")]
-        public Guid DeviceId { get; set; }
+        public string DeviceId { get; set; }
 
         [JsonProperty("display")]
         public Display Display { get; set; }
@@ -109,7 +109,7 @@ namespace Clova.CSharp.Models
         public IDictionary<string, object> SessionAttributes { get; set; }
 
         [JsonProperty("sessionId")]
-        public Guid SessionId { get; set; }
+        public string SessionId { get; set; }
 
         [JsonProperty("user")]
         public User User { get; set; }
